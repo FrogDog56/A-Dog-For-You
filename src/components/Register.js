@@ -1,11 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Logo from "./images/Logo.png"
 
-function Login () {
+function Register () {
     return (
         <div>
+            <div>
+                <img src={Logo} width={120}></img>
+            </div>
             <form>
-                <h1>Login</h1>
+                <h1>Register</h1>
                     <hr />
                         <div>
                             <h2>Username</h2>
@@ -15,10 +18,13 @@ function Login () {
                         <h2>Password</h2>
                             <input type={"password"} placeholder={"Password"} />
                         </div>
-                        <Link to="/register">Register</Link>
+                        <div>
+                        <h2>Repeat Password</h2>
+                            <input type={"password"} placeholder={"Repeat Password"} />
+                        </div>
             </form>
         </div>
     );
 }
 
-export default Login; 
+export default Register; 
